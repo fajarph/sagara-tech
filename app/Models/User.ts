@@ -14,6 +14,12 @@ export default class User extends BaseModel {
   public gender: string
 
   @column()
+  public address: string
+
+  @column()
+  public no_telp: string
+
+  @column()
   public email: string
 
   @column({ serializeAs: null })
