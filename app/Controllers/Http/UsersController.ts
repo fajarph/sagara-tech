@@ -9,7 +9,7 @@ export default class UsersController {
 
             const user = await User.query()
                 .preload("blog_posts", (query) => {
-                    query.select("id", "title", "content", "title")
+                    query.select("id", "title", "content", "tag")
                 })
                 .select("id", "name", "email", "gender")
 

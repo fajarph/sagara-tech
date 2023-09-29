@@ -28,6 +28,7 @@ Route.group(() => {
   Route.post("register", "AuthController.register")
   Route.post("login", "AuthController.login")
   Route.group(() => {
+    Route.get("users", "UsersController.getUsers")
     Route.post("blog-posts", "BlogPostsController.createBlogPost")
     Route.patch("blog-posts/:id", "BlogPostsController.updateBloPosts")
     Route.delete("blog-posts/:id", "BlogPostsController.deleteBlogPost")
