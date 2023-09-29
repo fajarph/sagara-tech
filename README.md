@@ -31,4 +31,8 @@
 1. Buka terminal dan jalankan `cd algorithm`
 2. Lalu jalankan `node algorithm.js` untuk melihat output yang dikeluarkan
 
+# Bonus
+
+1. Pengguna dapat memperbarui informasi profil mereka dengan endpoints `http://127.0.0.1:3333/api/users/:id` dengan method `PATCH` dan requestnya `email, name, gender, address dan no_telp` memperbarui berdasarkan id user
+
 # Terima Kasih 
