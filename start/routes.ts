@@ -25,6 +25,11 @@ Route.get('/', async () => {
 })
 
 Route.group(() => {
-  Route.post("register", "AuthController.register");
-  Route.post("login", "AuthController.login");
-}).prefix("api");
+  Route.post("register", "AuthController.register")
+  Route.post("login", "AuthController.login")
+  Route.group(() => {
+    Route.post("blog-posts", "BlogPostsController.createBlogPost")
+    Route.patch("blog-posts/:id", "BlogPostsController.updateBloPosts")
+    Route.delete("blog-posts/:id", "BlogPostsController.deleteBlogPost")
+  }).middleware(["auth"])
+}).prefix("api")

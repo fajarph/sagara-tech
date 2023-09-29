@@ -14,8 +14,8 @@ export default class BlogPost extends BaseModel {
   @column()
   public tag: string
 
-  @column()
-  public user_id: string
+  @column({ serializeAs: null })
+  public user_id: number
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
